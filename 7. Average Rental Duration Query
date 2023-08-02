@@ -1,0 +1,6 @@
+This query was used to find the average rental duration, joining various tables.
+
+SELECT AVG(f.rental_duration) AS avg_rental_dur
+FROM rental r
+INNER JOIN inventory i ON r.inventory_id = i.inventory_id
+INNER JOIN film f ON i.film_id = f.film_id;
