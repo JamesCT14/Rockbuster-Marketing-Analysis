@@ -26,10 +26,3 @@ Using PostgreSQL, the project performs a series of SQL queries on the datasets t
 The results from the SQLqueries and analysis are exported to Excel, where the data is visualized using various charts and diagrams. These visualizations are then used to create a presentation to advise stakeholders on different marketing-related questions.
 
 Please note that this project is for demonstration purposes and does not involve actual data from Rockbuster Stealth.
-
-## Link To Queries & Output
-
-[Queries & Output](https://docs.google.com/spreadsheets/d/1FW6aHbUr47MW0BDJyOs2S8DM6Eg2QPvhhRH8cMRJixk/edit#gid=0
-)
-
-
