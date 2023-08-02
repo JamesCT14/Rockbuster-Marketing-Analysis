@@ -1,0 +1,11 @@
+This query was used to find the summary statistics (min, q1, q2, q3, max, mean, standard deviation) for various variables.
+
+SELECT
+MIN(*column*) as MIN,
+PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY *column*) as Q1,
+PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY *column*) as Q2,
+PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY *column*) as Q3,
+MAX(*column*) as MAX,
+AVG(*column*) as AVG,
+STDDEV(*column*) as SD
+FROM *table*;
