@@ -1,0 +1,22 @@
+This query was used to find the top 10 cities for sales within the top 10 countries, joining various tables.
+
+SELECT D.country,
+C.city,
+COUNT(customer_id) AS customer_count
+FROM customer A
+INNER JOIN address B ON A.address_id = B.address_id
+INNER JOIN city C ON B.city_id = C.city_id
+INNER JOIN country D ON C.country_ID = D.country_ID
+WHERE country IN ('India',
+'China',
+'United States',
+'Japan',
+'Mexico',
+'Brazil',
+'Russian Federation',
+'Phillipines',
+'Turkey',
+'Indonesia')
+GROUP BY country, city
+ORDER BY customer_count DESC
+LIMIT 10;
