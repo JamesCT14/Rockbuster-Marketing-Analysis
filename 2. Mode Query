@@ -1,0 +1,13 @@
+This query was used to find the mode for various variables.
+
+SELECT *column* as modal_value, COUNT(*column*) as mode_count
+FROM *table*
+GROUP BY *column*
+HAVING COUNT(*column*) = (
+SELECT MAX(mode_count)
+FROM (
+SELECT COUNT(*column*) as mode_count
+FROM *table*
+GROUP BY *column*
+) mode_counts
+);
