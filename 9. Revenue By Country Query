@@ -1,0 +1,13 @@
+This query was used to find the total revenue of each country, joining various tables.
+
+SELECT co.country,
+SUM(p.amount) AS total_revenue,
+COUNT(p.amount) total_rentals
+FROM payment p
+INNER JOIN customer cu ON p.customer_id = cu.customer_id
+INNER JOIN address a ON cu.address_id = a.address_id
+INNER JOIN city ci ON a.city_id = ci.city_id
+INNER JOIN country co ON ci.country_id = co.country_id
+GROUP BY co.country
+ORDER BY co.country ASC
+;
