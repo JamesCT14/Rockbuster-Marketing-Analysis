@@ -1,4 +1,4 @@
-
+This query was used to find the bottom 10 films by revenue, joining various tables.
 
 SELECT f.title AS film_title, SUM(p.amount) AS rental_revenue
 FROM payment p
